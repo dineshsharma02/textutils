@@ -1,8 +1,8 @@
 import React , {useState} from 'react'
 
-export default function TextForm() {
+export default function TextForm(props) {
     // const handle
-    const [text, settext] = useState("Enter text here");
+    const [text, settext] = useState("");
     const handleUpClick = () =>{
         console.log("button was clicked");
         const  newtext = text.toUpperCase()
@@ -39,7 +39,7 @@ export default function TextForm() {
         <>
         <div className="container">
             <h2>Text to convert</h2>
-            <textarea className="form-control" id="myBox" onChange={handleChange} rows="10" value = {text} ></textarea>
+            <textarea className="form-control" style = {{ backgroundColor: props.mode==="light"?'white':'grey'}} id="myBox" onChange={handleChange} rows="10" value = {text} ></textarea>
             <br />
             <button className="btn btn-primary" onClick={handleUpClick}>Convert to uppercase</button>
             <button className="btn btn-primary m-2" onClick={handleLoClick}>Convert to lowercase</button>
@@ -56,7 +56,7 @@ export default function TextForm() {
         </div>
         <div className="container">
             <h3>Text preview</h3>
-            <p>{text}</p>
+            <p>{text.length>0?text:"Enter your text to preview here!"}</p>
         </div>
         </>
     )
