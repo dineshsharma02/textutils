@@ -19,27 +19,59 @@ function App(props) {
     }, 1700);
   }
 
-  const handleMode = () =>{
+  // const handleMode = () =>{
+  //   // 
+  //   if(mode==="light"){
+      
+  //     setmode("dark")
+  //     document.body.style.backgroundColor = "grey"
+  //     showAlert("Dark mode enabled","success")
+  //   }
+  //   else{
+  //     setmode("light")   
+  //     document.body.style.backgroundColor = "white"
+  //     showAlert("Light mode enabled","success")
+      
+  //   }
+  // }
+
+  const handleRedMode = () =>{
+    
+    setmode("red")
+    document.body.style.backgroundColor = "rgb(179, 58, 58)"
+    showAlert("Red mode enabled","success")
+     
+    
+  }
+
+  const handleDarkMode = () =>{
     // 
-    if(mode==="light"){
+    
       
-      setmode("dark")
-      document.body.style.backgroundColor = "grey"
-      showAlert("Dark mode enabled","success")
-    }
-    else{
-      setmode("light")   
-      document.body.style.backgroundColor = "white"
-      showAlert("Light mode enabled","success")
+    setmode("dark")
+    document.body.style.backgroundColor = "grey"
+    showAlert("Dark mode enabled","success")
+    
+    
       
-    }
+  }
+  
+
+  const handleLightMode = () =>{
+    // 
+    
+    setmode("light")   
+    document.body.style.backgroundColor = "white"
+    showAlert("Light mode enabled","success")
+      
+    
   }
 
   return (
     <>
     {/* <Navbar title = "Dinesh's rings" aboutText = "About dinesh's site"/> */}
     {/* <Navbar  aboutText = "About dinesh's site"/> */}
-    <Navbar mode={mode} handleMode = {handleMode} />
+    <Navbar  mode={mode}  handleRedMode = {handleRedMode} handleDarkMode = {handleDarkMode} handleLightMode={handleLightMode} />
     <Alert  alert = {alert}/>
     <TextForm  mode={mode} showAlert = {showAlert} />
     
@@ -47,6 +79,6 @@ function App(props) {
     </>
 
   );
-}
+  }
 
 export default App;

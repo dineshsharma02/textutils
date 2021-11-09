@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.dot-switch-red{
+  background-color: red;
+  border-radius: 40px solid red;
+}
+
+body{
+  background-color: red;
+}

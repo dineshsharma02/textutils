@@ -1,3 +1,27 @@
 li{
   color: aqua;
 }
+.dot-switch-red{
+  border: 10px solid rgb(179, 58, 58);
+  border-radius: 40px;
+  background-color: rgb(189, 63, 63);
+  margin: 10px;
+}
+.dot-switch-dark{
+  border: 10px solid black;
+  border-radius: 40px;
+  background-color: black;
+  margin: 10px;
+}
+
+.dot-switch-light{
+  border: 10px solid grey;
+  border-radius: 40px;
+  background-color: grey;
+  margin: 10px;
+}
+
+
+
+
+
