@@ -2,16 +2,16 @@ import './App.css';
 // import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm'
-import About from './components/About'
+// import About from './components/About'
 import { useState } from 'react';
 import React from "react";
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
   
-} from "react-router-dom";
+// } from "react-router-dom";
 
 function App(props) {
   const [mode, setmode] = useState("light")
@@ -80,21 +80,22 @@ function App(props) {
     {/* <Navbar title = "Dinesh's rings" aboutText = "About dinesh's site"/> */}
     {/* <Navbar  aboutText = "About dinesh's site"/> */}
     
+    {/* removing router for github pages */}
     
-    
-    <Router>
+    {/* <Router> */}
       <Navbar  mode={mode}  handleRedMode = {handleRedMode} handleDarkMode = {handleDarkMode} handleLightMode={handleLightMode} />
       <Alert  alert = {alert}/>
       <div className="container my-3">
-      <Routes>
-            <Route exact path="/about" element={<About />}>
-              
-            </Route>
-            <Route exact path="/" element={<TextForm  mode={mode} showAlert = {showAlert} />}>
-            </Route>
-      </Routes>
+      {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />}> */}
+            {/* <About /> */}
+            <TextForm  mode={mode} showAlert = {showAlert} />
+            {/* </Route> */}
+            {/* <Route exact path="/" element={<TextForm  mode={mode} showAlert = {showAlert} />}> */}
+            {/* </Route> */}
+      {/* </Routes> */}
       </div>
-    </Router>
+    {/* </Router> */}
 
       
       
