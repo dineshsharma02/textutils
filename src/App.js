@@ -46,7 +46,7 @@ function App(props) {
   const handleRedMode = () =>{
     
     setmode("red")
-    document.body.style.backgroundColor = "rgb(179, 58, 58)"
+    document.body.style.backgroundColor = "#d16060"
     showAlert("Red mode enabled","success")
      
     
