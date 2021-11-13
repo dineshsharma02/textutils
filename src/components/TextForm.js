@@ -56,10 +56,10 @@ export default function TextForm(props) {
         </div>
         <div className="container">
             <h3>Text analysis</h3>
-            
+            <p>Words = {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
             <p>Chars = {text.length}</p>
-            <p>Words = {text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
-            <p>Reading time = {(text.split(" ").filter((element)=>{return element.length!==0}).length)/125} min</p>
+            
+            <p>Reading time = {(text.split(/\s+/).filter((element)=>{return element.length!==0}).length)/125} min</p>
         </div>
         <div className="container">
             <h3>Text preview</h3>
